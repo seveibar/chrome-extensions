@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Checks Sound Notifier",
+  "version": "1.0",
+  "description": "Plays sounds when GitHub PR checks pass or fail",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["success.mp3", "failure.mp3"],
+      "matches": ["https://github.com/*"]
+    }
+  ]
+}

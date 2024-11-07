@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "X Tab Timer",
+  "version": "1.0",
+  "description": "Automatically closes X tabs after 30 seconds",
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*", "*://*.x.com/*"],
+      "js": ["content.js"],
+      "css": ["timer.css"]
+    }
+  ]
+}
